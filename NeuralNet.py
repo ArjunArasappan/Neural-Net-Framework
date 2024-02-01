@@ -1,4 +1,4 @@
-from layers import Layer
+from Layers import Layer
 import random
 import numpy as np
 
@@ -136,7 +136,7 @@ class NeuralNetwork:
 
                 
             
-            if epoch % 100 == 0:
+            if epoch % 10000 == 0:
                 print('Epoch:', epoch)
                 print("   Accuracy:", 100 * self.getAccuracy(train_arr))
                 print("   Rate:", self.varRate)

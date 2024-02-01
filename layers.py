@@ -90,8 +90,8 @@ class Layer:
         
     def backProp(self, dz, alpha): # nodes x batch
  
-        dW = np.dot(dz, self.lastx.transpose()) / self.size        
-        db = np.sum(dz, 1).reshape(self.size, 1) / self.size
+        dW = np.dot(dz, self.lastx.transpose()) / self.inputSize        
+        db = np.sum(dz, 1).reshape(self.size, 1) / self.inputSize
         
         dx = np.dot(self.weights.transpose(), dz) #input x batch
         
